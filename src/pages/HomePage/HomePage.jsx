@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { QuestionCardList } from '../../components/QuestionCardList';
+import { Loader } from '../../components/Loader';
 import { API_URL } from '../../constants';
 // import cls from './HomePage.module.css';
 
@@ -22,6 +23,7 @@ export const HomePage = () => {
   }, []);
   return (
     <>
+      <Loader />
       <QuestionCardList cards={questions} />
     </>
   );
