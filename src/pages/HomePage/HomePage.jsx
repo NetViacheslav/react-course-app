@@ -20,13 +20,13 @@ export const HomePage = () => {
     getQuestions('react');
   }, []);
 
-  const searchValueHandler = (e) => {
+  const onSearchChangeHandler = (e) => {
     setSearchValue(e.target.value);
   };
 
   return (
     <>
-      <input type="text" value={searchValue} onChange={searchValueHandler} />
+      <input type="text" value={searchValue} onChange={onSearchChangeHandler} />
 
       {isLoading && <Loader />}
       {error && <p>{error}</p>}
