@@ -9,7 +9,7 @@
 }
 
 .loader {
-  font-size: 48px;
+  font-size: 30px;
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -52,10 +52,10 @@
   position: relative;
   border-radius: 2px;
   box-sizing: border-box;
-  animation: animloader 1s linear infinite alternate;
+  animation: animLoaderCheckbox 1s linear infinite alternate;
 }
 
-@keyframes animloader {
+@keyframes animLoaderCheckbox {
   0% {
     box-shadow: 20px 0 rgba(255, 255, 255, 0.25), 40px 0 white, 60px 0 white;
   }
