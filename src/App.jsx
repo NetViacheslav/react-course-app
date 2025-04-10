@@ -13,7 +13,7 @@ import { HomePage } from './pages/HomePage';
 import { QuestionPage } from './pages/QuestionPage';
 import { AddQuestionPageLazy } from './pages/AddQuestionPage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { EditQuestionPage } from './pages/EditQuestionPage';
+import { EditQuestionPageLazy } from './pages/EditQuestionPage';
 import { useAuth } from './hooks/useAuth';
 import { AuthProvider } from './auth/AuthProvider';
 import { ForbiddenPage } from './pages/ForbiddenPage';
@@ -41,7 +41,10 @@ function App() {
 
             <Route element={<ProtectedRoutes />}>
               <Route path="/question/:id" element={<QuestionPage />} />
-              <Route path="/editquestion/:id" element={<EditQuestionPage />} />
+              <Route
+                path="/editquestion/:id"
+                element={<EditQuestionPageLazy />}
+              />
             </Route>
 
             <Route path="*" element={<NotFoundPage />} />
